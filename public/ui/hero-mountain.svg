@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1326"/>
+      <stop offset="40%" stop-color="#19243d"/>
+      <stop offset="75%" stop-color="#3d2a45"/>
+      <stop offset="100%" stop-color="#ff6f59" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="mtn1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4fdbc8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0b1326"/>
+    </linearGradient>
+    <linearGradient id="mtn2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d3449"/>
+      <stop offset="100%" stop-color="#0b1326"/>
+    </linearGradient>
+    <linearGradient id="mtn3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#171f33"/>
+      <stop offset="100%" stop-color="#060e20"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="#ffb95f" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ff6f59" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0b1326" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1600" height="900" fill="url(#skyGrad)"/>
+
+  <!-- Sun Glow -->
+  <circle cx="800" cy="550" r="450" fill="url(#sunGlow)"/>
+
+  <!-- Stars -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="200" cy="120" r="1.5"/>
+    <circle cx="450" cy="80" r="1"/>
+    <circle cx="700" cy="150" r="2"/>
+    <circle cx="950" cy="90" r="1.5"/>
+    <circle cx="1200" cy="140" r="1"/>
+    <circle cx="1400" cy="70" r="2"/>
+    <circle cx="300" cy="220" r="1"/>
+    <circle cx="850" cy="200" r="1.5"/>
+    <circle cx="1100" cy="240" r="1"/>
+  </g>
+
+  <!-- Far Mountain Range -->
+  <path d="M0,580 L180,420 L350,520 L550,380 L750,490 L950,340 L1150,480 L1350,390 L1600,540 L1600,900 L0,900 Z" fill="url(#mtn1Grad)"/>
+
+  <!-- Mid Mountain Range (Alpine Peaks) -->
+  <path d="M0,640 L220,470 L480,590 L700,430 L920,560 L1200,410 L1420,530 L1600,460 L1600,900 L0,900 Z" fill="url(#mtn2Grad)"/>
+
+  <!-- Foreground Ridge -->
+  <path d="M0,720 L300,560 L600,680 L900,510 L1250,650 L1600,580 L1600,900 L0,900 Z" fill="url(#mtn3Grad)"/>
+
+  <!-- Mist overlay -->
+  <rect y="650" width="1600" height="250" fill="url(#skyGrad)" opacity="0.4"/>
+</svg>

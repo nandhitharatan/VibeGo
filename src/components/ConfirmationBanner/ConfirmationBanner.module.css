@@ -7,13 +7,13 @@
 .bannerCard {
   position: relative;
   overflow: hidden;
-  background: rgba(4, 180, 162, 0.18);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(79, 219, 200, 0.4);
+  background: var(--color-secondary-container);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--color-secondary);
   border-radius: var(--radius-xl);
   padding: 1.25rem 1.75rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 24px rgba(79, 219, 200, 0.2);
+  box-shadow: var(--glass-shadow), 0 0 24px rgba(13, 148, 136, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +28,7 @@
   height: 160px;
   border-radius: 50%;
   background: var(--color-secondary);
-  opacity: 0.15;
+  opacity: 0.2;
   filter: blur(40px);
   pointer-events: none;
 }
@@ -44,16 +44,15 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(79, 219, 200, 0.25);
-  border: 1px solid var(--color-secondary);
-  color: var(--color-secondary);
+  background: var(--color-secondary);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   font-weight: 800;
   flex-shrink: 0;
-  box-shadow: 0 0 16px rgba(79, 219, 200, 0.35);
+  box-shadow: 0 0 16px rgba(13, 148, 136, 0.4);
 }
 
 .infoGroup {
@@ -64,7 +63,7 @@
 
 .tag {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-secondary);
@@ -74,7 +73,7 @@
 .heading {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-on-surface);
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
@@ -96,9 +95,9 @@
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
+  background: var(--glass-bg-hover);
+  border: 1px solid var(--color-outline-bright);
+  color: var(--color-on-surface);
   font-size: 0.85rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -106,8 +105,8 @@
 }
 
 .startOverBtn:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: var(--color-surface-container);
+  border-color: var(--color-secondary);
   transform: translateY(-1px);
 }
 

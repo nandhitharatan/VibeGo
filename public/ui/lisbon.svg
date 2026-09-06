@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#fef08a"/>
+  <!-- Pastel Buildings -->
+  <rect x="50" y="220" width="160" height="380" fill="#f472b6"/>
+  <rect x="230" y="180" width="180" height="420" fill="#60a5fa"/>
+  <rect x="430" y="240" width="170" height="360" fill="#fbbf24"/>
+  <rect x="620" y="200" width="140" height="400" fill="#a7f3d0"/>
+  <!-- Yellow Tram 28 -->
+  <rect x="300" y="440" width="220" height="110" rx="16" fill="#eab308"/>
+  <rect x="320" y="460" width="40" height="40" rx="4" fill="#1e293b"/>
+  <rect x="375" y="460" width="40" height="40" rx="4" fill="#1e293b"/>
+  <rect x="430" y="460" width="40" height="40" rx="4" fill="#1e293b"/>
+  <circle cx="340" cy="550" r="14" fill="#0f172a"/>
+  <circle cx="480" cy="550" r="14" fill="#0f172a"/>
+</svg>

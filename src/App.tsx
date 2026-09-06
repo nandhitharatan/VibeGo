@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { VibeFilter, BudgetFilter, Destination } from './types';
 import { destinations } from './data/destinations';
 import { Header } from './components/Header/Header';
@@ -9,12 +9,22 @@ import { DestinationGrid } from './components/DestinationGrid/DestinationGrid';
 import { DetailsModal } from './components/DetailsModal/DetailsModal';
 
 export function App() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVibe, setSelectedVibe] = useState<VibeFilter>('all');
   const [selectedBudget, setSelectedBudget] = useState<BudgetFilter>('all');
   const [modalDestination, setModalDestination] = useState<Destination | null>(null);
   const [confirmedDestination, setConfirmedDestination] = useState<Destination | null>(null);
 
   const triggerButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  // Sync theme with root HTML element attribute without flash
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const handleToggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   // AND filtering logic: destination must match both selected vibe AND selected budget
   const filteredDestinations = useMemo(() => {
@@ -59,6 +69,8 @@ export function App() {
   return (
     <div className="app-container">
       <Header
+        theme={theme}
+        onToggleTheme={handleToggleTheme}
         onReset={handleResetAll}
         hasActiveFiltersOrSelection={hasActiveFiltersOrSelection}
       />
@@ -98,7 +110,7 @@ export function App() {
       <footer style={{
         textAlign: 'center',
         padding: '2rem 1.5rem',
-        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        borderTop: '1px solid var(--color-outline)',
         color: 'var(--color-on-surface-variant)',
         fontSize: '0.85rem'
       }}>

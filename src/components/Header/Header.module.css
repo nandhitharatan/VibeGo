@@ -3,11 +3,12 @@
   top: 0;
   z-index: 40;
   width: 100%;
-  background: rgba(11, 19, 38, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--color-outline);
   padding: 0.75rem 1.5rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .container {
@@ -16,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .brand {
@@ -32,10 +34,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-on-primary);
+  color: #ffffff;
   font-weight: 800;
   font-size: 1.1rem;
-  box-shadow: 0 0 16px rgba(255, 111, 89, 0.4);
+  box-shadow: 0 0 16px rgba(224, 79, 56, 0.35);
 }
 
 .titleGroup {
@@ -53,29 +55,58 @@
 
 .subtitle {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-secondary);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.actionsGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.themeToggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg-hover);
+  border: 1px solid var(--color-outline-bright);
+  color: var(--color-on-surface);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.themeToggleBtn:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-primary);
+}
+
+.themeToggleBtn:active {
+  transform: scale(0.96);
 }
 
 .resetBtn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.9rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--color-on-surface);
+  background: var(--color-primary-container);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.2s ease;
 }
 
 .resetBtn:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
   transform: translateY(-1px);
 }
 

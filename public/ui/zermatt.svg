@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="zBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="zMtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="zGlow" cx="65%" cy="60%" r="35%">
+      <stop offset="0%" stop-color="#ffb95f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffb95f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#zBg)"/>
+  <!-- Snowy Peak Matterhorn -->
+  <polygon points="450,120 280,480 620,480" fill="url(#zMtn)"/>
+  <polygon points="450,120 410,240 450,220 480,280 530,250" fill="#f8fafc" opacity="0.9"/>
+  <!-- Chalet silhouette -->
+  <path d="M150,380 L280,300 L410,380 L410,540 L150,540 Z" fill="#0f172a"/>
+  <!-- Roof snow cap -->
+  <path d="M140,380 L280,290 L420,380 L410,390 L280,305 L150,390 Z" fill="#e2e8f0"/>
+  <!-- Glowing Chalet Windows -->
+  <rect x="190" y="400" width="60" height="80" rx="6" fill="#ffb95f"/>
+  <rect x="290" y="400" width="60" height="80" rx="6" fill="#ffb95f"/>
+  <circle cx="280" cy="350" r="20" fill="#ffb95f"/>
+  <!-- Warm glow -->
+  <circle cx="290" cy="440" r="180" fill="url(#zGlow)"/>
+  <!-- Pine trees -->
+  <polygon points="100,520 60,520 80,450" fill="#064e3b"/>
+  <polygon points="130,530 90,530 110,430" fill="#022c22"/>
+  <polygon points="550,530 500,530 525,420" fill="#064e3b"/>
+  <polygon points="620,540 560,540 590,400" fill="#022c22"/>
+</svg>

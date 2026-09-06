@@ -34,7 +34,7 @@ export const Hero: React.FC<HeroProps> = ({
     <section className={styles.heroSection} aria-label="Trip Discovery Filters">
       <div className={styles.heroBg} aria-hidden="true">
         <img
-          src="/images/hero-mountain.svg"
+          src="/ui/hero-mountain.png"
           alt=""
           width={1600}
           height={900}

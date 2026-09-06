@@ -5,20 +5,20 @@
   text-align: left;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  background: rgba(23, 31, 51, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
   box-shadow: var(--glass-shadow);
-  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), border-color 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
   position: relative;
   cursor: pointer;
 }
 
 .cardButton:hover {
   transform: translateY(-4px) scale(1.01);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45), 0 0 24px rgba(255, 111, 89, 0.15);
+  border-color: var(--color-outline-bright);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2), 0 0 24px rgba(224, 79, 56, 0.15);
 }
 
 .cardButton:active {
@@ -27,7 +27,7 @@
 
 .cardButton[data-selected="true"] {
   border-color: var(--color-secondary);
-  box-shadow: 0 0 24px rgba(79, 219, 200, 0.35);
+  box-shadow: 0 0 24px rgba(13, 148, 136, 0.35);
 }
 
 .imageWrapper {
@@ -52,7 +52,7 @@
 .imageGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(11, 19, 38, 0.95) 0%, rgba(11, 19, 38, 0.2) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.7) 0%, transparent 60%);
 }
 
 .topBadges {
@@ -72,10 +72,10 @@
   gap: 0.3rem;
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
-  background: rgba(11, 19, 38, 0.75);
+  background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  color: var(--color-on-surface);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -87,12 +87,12 @@
   padding: 0.3rem 0.8rem;
   border-radius: var(--radius-full);
   background: var(--color-secondary);
-  color: var(--color-on-secondary);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  box-shadow: 0 0 12px rgba(79, 219, 200, 0.5);
+  box-shadow: 0 0 12px rgba(13, 148, 136, 0.5);
 }
 
 .ratingBadge {
@@ -104,16 +104,16 @@
   gap: 0.3rem;
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
-  background: rgba(11, 19, 38, 0.8);
+  background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  color: var(--color-on-surface);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
 }
 
 .starIcon {
-  color: var(--color-tertiary);
+  color: #fbbf24;
 }
 
 .cardBody {
@@ -134,7 +134,7 @@
 .name {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-on-surface);
   line-height: 1.25;
 }
 
@@ -159,7 +159,7 @@
 .location {
   font-size: 0.8rem;
   color: var(--color-secondary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .tagline {
@@ -184,17 +184,17 @@
 .vibeTag {
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  background: rgba(79, 219, 200, 0.15);
+  background: var(--color-secondary-container);
   color: var(--color-secondary);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: capitalize;
 }
 
 .budgetTag {
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-surface-highest);
   color: var(--color-on-surface-variant);
   font-size: 0.75rem;
   font-weight: 600;
@@ -203,7 +203,7 @@
 
 .actionHint {
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-primary);
   display: flex;
   align-items: center;

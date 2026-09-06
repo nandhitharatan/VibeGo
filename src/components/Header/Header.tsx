@@ -2,11 +2,20 @@ import React from 'react';
 import styles from './Header.module.css';
 
 interface HeaderProps {
+  theme: 'light' | 'dark';
+  onToggleTheme: () => void;
   onReset: () => void;
   hasActiveFiltersOrSelection: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onReset, hasActiveFiltersOrSelection }) => {
+export const Header: React.FC<HeaderProps> = ({
+  theme,
+  onToggleTheme,
+  onReset,
+  hasActiveFiltersOrSelection,
+}) => {
+  const isLight = theme === 'light';
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -18,17 +27,29 @@ export const Header: React.FC<HeaderProps> = ({ onReset, hasActiveFiltersOrSelec
           </div>
         </div>
 
-        {hasActiveFiltersOrSelection && (
+        <div className={styles.actionsGroup}>
           <button
             type="button"
-            className={styles.resetBtn}
-            onClick={onReset}
-            aria-label="Start over - clear all filters and selected trip"
+            className={styles.themeToggleBtn}
+            onClick={onToggleTheme}
+            aria-label={isLight ? 'Switch to dark theme' : 'Switch to light theme'}
           >
-            <span>↺</span>
-            <span>Start over</span>
+            <span aria-hidden="true">{isLight ? '🌙' : '☀️'}</span>
+            <span>{isLight ? 'Dark' : 'Light'}</span>
           </button>
-        )}
+
+          {hasActiveFiltersOrSelection && (
+            <button
+              type="button"
+              className={styles.resetBtn}
+              onClick={onReset}
+              aria-label="Start over - clear all filters and selected trip"
+            >
+              <span>↺</span>
+              <span>Start over</span>
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );

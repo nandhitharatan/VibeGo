@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(6, 14, 32, 0.75);
+  background: rgba(6, 14, 32, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
@@ -23,12 +23,10 @@
   max-width: 680px;
   max-height: 90vh;
   overflow-y: auto;
-  background: rgba(23, 31, 51, 0.92);
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-outline-bright);
   border-radius: var(--radius-xl);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 32px rgba(255, 111, 89, 0.12);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), 0 0 32px rgba(224, 79, 56, 0.12);
   display: flex;
   flex-direction: column;
   animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -52,6 +50,7 @@
   overflow: hidden;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
+  background: var(--color-surface-dim);
 }
 
 .image {
@@ -63,7 +62,7 @@
 .imageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(23, 31, 51, 0.95) 0%, transparent 60%);
+  background: linear-gradient(to top, var(--color-surface-container) 0%, transparent 60%);
 }
 
 .closeBtn {
@@ -74,7 +73,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(11, 19, 38, 0.7);
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -87,7 +86,8 @@
 }
 
 .closeBtn:hover {
-  background: rgba(255, 111, 89, 0.8);
+  background: var(--color-primary);
+  color: #ffffff;
   transform: scale(1.05);
 }
 
@@ -101,13 +101,13 @@
   gap: 0.4rem;
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
-  background: rgba(11, 19, 38, 0.75);
+  background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(79, 219, 200, 0.4);
-  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  color: #ffffff;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .modalBody {
@@ -132,14 +132,14 @@
 .title {
   font-size: 1.75rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-on-surface);
   line-height: 1.2;
 }
 
 .location {
   font-size: 0.9rem;
   color: var(--color-secondary);
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 0.2rem;
 }
 
@@ -147,10 +147,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--color-surface-highest);
   padding: 0.5rem 0.9rem;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--color-outline);
 }
 
 .price {
@@ -174,8 +174,8 @@
 .pill {
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--color-surface-highest);
+  border: 1px solid var(--color-outline);
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-on-surface);
@@ -189,7 +189,7 @@
 
 .sectionTitle {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -213,8 +213,8 @@
   gap: 0.6rem;
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface-highest);
+  border: 1px solid var(--color-outline);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-on-surface);
@@ -223,7 +223,7 @@
 .footer {
   margin-top: 0.5rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-outline);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -234,7 +234,7 @@
   width: 100%;
   padding: 0.9rem 1.75rem;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--color-primary), #ff8f7d);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-tertiary));
   color: #ffffff;
   font-size: 1rem;
   font-weight: 800;
@@ -242,13 +242,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  box-shadow: 0 6px 24px rgba(255, 111, 89, 0.4);
+  box-shadow: 0 6px 24px rgba(224, 79, 56, 0.35);
   transition: all 0.2s ease;
 }
 
 .pickTripBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(255, 111, 89, 0.55);
+  box-shadow: 0 10px 32px rgba(224, 79, 56, 0.45);
 }
 
 .pickTripBtn:active {
