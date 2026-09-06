@@ -9,7 +9,7 @@ import { DestinationGrid } from './components/DestinationGrid/DestinationGrid';
 import { DetailsModal } from './components/DetailsModal/DetailsModal';
 
 export function App() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [selectedVibe, setSelectedVibe] = useState<VibeFilter>('all');
   const [selectedBudget, setSelectedBudget] = useState<BudgetFilter>('all');
   const [modalDestination, setModalDestination] = useState<Destination | null>(null);

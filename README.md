@@ -2,7 +2,7 @@
 
 > **Vibe & Go** is a fast, glassmorphic mood-based weekend destination discovery application. It enables users to discover and select spontaneous 48-hour boutique escapes tailored to their mood (*vibe*) and budget (*Budget*, *Mid*, *Splurge*).
 
-![Vibe & Go Application Screenshot](public/ui/app-screenshot.jpg)
+![Vibe & Go Application Screenshot](public/ui/app-screenshot.png)
 
 ---
 
@@ -38,7 +38,7 @@ frontend_warmup/
 ├── public/
 │   └── ui/                           # Optimized local static UI assets & photos
 │       ├── amalfi.jpg
-│       ├── app-screenshot.jpg
+│       ├── app-screenshot.png
 │       ├── banff.jpg
 │       ├── hero-mountain.png
 │       ├── kyoto.jpg
