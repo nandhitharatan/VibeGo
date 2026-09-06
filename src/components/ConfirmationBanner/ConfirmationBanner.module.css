@@ -1,0 +1,126 @@
+.bannerContainer {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.bannerCard {
+  position: relative;
+  overflow: hidden;
+  background: rgba(4, 180, 162, 0.18);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(79, 219, 200, 0.4);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem 1.75rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 24px rgba(79, 219, 200, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.glowBlob {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  opacity: 0.15;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.checkIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(79, 219, 200, 0.25);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(79, 219, 200, 0.35);
+}
+
+.infoGroup {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 0.15rem;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--color-on-surface-variant);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.startOverBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.startOverBtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.startOverBtn:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 640px) {
+  .bannerCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .startOverBtn {
+    align-self: flex-start;
+  }
+}

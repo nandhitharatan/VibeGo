@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bLake" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#0f172a"/>
+  <!-- Rocky peaks -->
+  <polygon points="120,400 280,140 440,400" fill="#475569"/>
+  <polygon points="280,140 260,200 280,190 310,230" fill="#f8fafc"/>
+  <polygon points="350,420 520,180 680,420" fill="#334155"/>
+  <polygon points="520,180 500,240 520,230 550,260" fill="#f8fafc"/>
+  <!-- Turquoise Lake Moraine -->
+  <path d="M0,380 L800,380 L800,600 L0,600 Z" fill="url(#bLake)"/>
+  <!-- Canoe -->
+  <path d="M360,480 Q420,510 480,480 Q420,490 360,480 Z" fill="#ef4444"/>
+</svg>

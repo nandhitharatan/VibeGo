@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="60%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sSky)"/>
+  <!-- Red Rock Formations -->
+  <path d="M60,450 L120,240 L280,240 L340,450 Z" fill="#9a3412"/>
+  <path d="M420,450 L480,180 L660,180 L720,450 Z" fill="#c2410c"/>
+  <rect y="450" width="800" height="150" fill="#7c2d12"/>
+  <!-- Desert Cacti -->
+  <path d="M220,490 L220,420 M210,440 L230,440 L230,425 M210,455 L210,445" stroke="#15803d" stroke-width="6" fill="none"/>
+</svg>
