@@ -20,7 +20,13 @@ export const Header: React.FC<HeaderProps> = ({
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.brand}>
-          <div className={styles.logoIcon} aria-hidden="true">⚡</div>
+          <img
+            src="/ui/logo.png"
+            alt="Vibe &amp; Go Brand Logo"
+            width={180}
+            height={48}
+            className={styles.logoImage}
+          />
           <div className={styles.titleGroup}>
             <span className={styles.title}>Vibe &amp; Go</span>
             <span className={styles.subtitle}>Weekend Discovery</span>
