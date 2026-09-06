@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import styles from './Header.module.css';
 
 interface HeaderProps {
@@ -14,8 +15,6 @@ export const Header: React.FC<HeaderProps> = ({
   onReset,
   hasActiveFiltersOrSelection,
 }) => {
-  const isLight = theme === 'light';
-
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -34,15 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         <div className={styles.actionsGroup}>
-          <button
-            type="button"
-            className={styles.themeToggleBtn}
-            onClick={onToggleTheme}
-            aria-label={isLight ? 'Switch to dark theme' : 'Switch to light theme'}
-          >
-            <span aria-hidden="true">{isLight ? '🌙' : '☀️'}</span>
-            <span>{isLight ? 'Dark' : 'Light'}</span>
-          </button>
+          <ThemeToggle theme={theme} onToggleTheme={onToggleTheme} />
 
           {hasActiveFiltersOrSelection && (
             <button
