@@ -22,9 +22,9 @@ export const Header: React.FC<HeaderProps> = ({
         <div className={styles.brand}>
           <img
             src="/ui/logo.png"
-            alt="Vibe &amp; Go Brand Logo"
-            width={180}
-            height={48}
+            alt="Vibe &amp; Go Brand Compass Logo"
+            width={42}
+            height={42}
             className={styles.logoImage}
           />
           <div className={styles.titleGroup}>

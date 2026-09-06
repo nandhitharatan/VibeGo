@@ -27,9 +27,11 @@
 }
 
 .logoImage {
-  height: 38px;
-  width: auto;
-  object-fit: contain;
+  height: 42px;
+  width: 42px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .titleGroup {
