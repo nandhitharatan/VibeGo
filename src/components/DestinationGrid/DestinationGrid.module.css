@@ -61,3 +61,36 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(224, 79, 56, 0.45);
 }
+
+.resetBtn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 16px rgba(224, 79, 56, 0.5);
+}
+
+.resetBtn:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+  .gridSection {
+    margin-bottom: 3rem;
+  }
+  .grid {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridSection {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .emptyState {
+    padding: 2.5rem 1.25rem;
+  }
+}

@@ -17,6 +17,27 @@
   border-color: var(--color-primary);
 }
 
+.themeToggleBtn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 12px rgba(224, 79, 56, 0.4);
+}
+
 .themeToggleBtn:active {
   transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+  .themeToggleBtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .themeToggleBtn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
 }
